@@ -734,6 +734,18 @@ input, select{
   font-size: 1rem;
 }
 
+select{
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 5"><path d="M8,0H0L4,5Z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
 input:focus,
 textarea:focus,
 select:focus{
