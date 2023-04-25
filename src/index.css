@@ -530,7 +530,6 @@ main{
 
 .home{
   width: 100vw;
-  background-image: url(src/images/vanlifeHome.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 5rem 2rem;
