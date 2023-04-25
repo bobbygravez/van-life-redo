@@ -434,6 +434,29 @@ p.van-review-text{
   margin: 0;
 }
 
+.email-modal p{
+  margin: .5rem 0;
+  font-weight: 600;
+}
+
+.van-added{
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.van-updated{
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
 
 /* images */
 
@@ -700,12 +723,13 @@ button, .home a{
 }
 
 input, select{
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   background: #FFFFFF;
   border: 1px solid #D1D5DB;
   border-radius: 6px;
   padding: 1rem;
-  -webkit-padding: 1rem;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -1061,28 +1085,7 @@ button:disabled, .post-comment:disabled{
   border-radius: 3px;
 }
 
-.email-modal p{
-  margin: .5rem 0;
-  font-weight: 600;
-}
 
-.van-added{
-  font-size: 1.5rem;
-  font-weight: 500;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
-}
-
-.van-updated{
-  font-size: 1.8rem;
-  font-weight: 600;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-}
 
 .fa-xmark{
   display: block;
