@@ -7,8 +7,9 @@ import {
     signInWithEmailAndPassword
 } from "firebase/auth"
 
+// import.meta.env.VITE_API_KEY
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
+  apiKey: "AIzaSyB3D_vAsPfkXdKSJciTTE6T1Eydp8FgOFY",
   authDomain: "new-vanlife.firebaseapp.com",
   projectId: "new-vanlife",
   storageBucket: "new-vanlife.appspot.com",
