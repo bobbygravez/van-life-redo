@@ -49,18 +49,18 @@ function EditVan() {
             hostId: vanData.hostId
         })
             .then(() => {
-                setDisplayMessage({ success: "Van updated successfully" })
+                setDisplayMessage({ success: "Van updated!" })
                 setLoading(false)
                 setUploadProgress("0")
                 setTimeout(() => {
                     setDisplayMessage({ success: null })
-                }, 5000)
+                }, 2000)
             }).catch(err => {
                 setDisplayMessage({ error: err.message })
                 setLoading(false)
                 setTimeout(() => {
                     setDisplayMessage({ error: null })
-                }, 5000)
+                }, 3000)
             })
     }
 
@@ -106,10 +106,10 @@ function EditVan() {
       }, [])
 
     return (
-        <div className='padding'>
+        <div className='padding edit-van-container'>
             <Link to=".." className='underline back-to-dashboard'><i className="fa-solid fa-arrow-left"></i> Back to dashboard</Link>
-            {displayMessage.error && <h2 className='error-message'>{displayMessage.error}</h2>}
-            {displayMessage.success && <h2 className='success-message'>{displayMessage.success}</h2>}
+            {displayMessage.error && <h2 className='error-message van-updated'>{displayMessage.error}</h2>}
+            {displayMessage.success && <h2 className='success-message van-updated'>{displayMessage.success}</h2>}
             <img src={van.imageUrl} alt="van image" className='host-van-image' />
             <form onSubmit={updateVan}>
                 <label htmlFor="van-name" className='label'>Van name:</label>

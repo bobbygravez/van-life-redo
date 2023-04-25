@@ -77,7 +77,7 @@ function Login() {
                 <input type="email" name='email' placeholder='Email address' autoComplete='off' />
                 <input type="password" name='password' placeholder='Password' autoComplete='off' />
                 <Link to='/forgotPassword' className='forgot-password'>Forgot Password?</Link>
-                <button disabled={navigation.state === "submitting"} className='sign-in'>{navigation.state === "submitting" ? "Signing in.." : "Sign in"}</button>
+                <button disabled={navigation.state === "submitting"} className='sign-in'>{navigation.state === "submitting" ? "Signing in...." : "Sign in"}</button>
             </Form>
             <p>Don't have an account? <Link to="/createUser"><span>Create one now</span></Link></p>
             <hr />

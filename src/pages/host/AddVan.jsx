@@ -65,7 +65,7 @@ function AddVan() {
                     setLoading(false)
                     setTimeout(() => {
                         setDisplayMessage({ error: null })
-                    }, 2000)
+                    }, 3000)
                 })
         } else{
                 setShowModal(true)
@@ -110,7 +110,7 @@ function AddVan() {
 
     return (
         <div className='padding add-van-container'>
-            {displayMessage.error && <h2 className='error-message'>{displayMessage.error}</h2>}
+            {displayMessage.error && <h2 className='error-message van-added'>{displayMessage.error}</h2>}
             {displayMessage.success && <h2 className='success-message van-added'>{displayMessage.success}</h2>}
             {showModal && <div className='email-modal'>
                 <i className="fa-solid fa-xmark" onClick={() => setShowModal(false)}></i>

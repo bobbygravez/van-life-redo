@@ -705,6 +705,7 @@ input, select{
   border: 1px solid #D1D5DB;
   border-radius: 6px;
   padding: 1rem;
+  -webkit-padding: 1rem;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -1032,17 +1033,15 @@ button:disabled, .post-comment:disabled{
   align-items: center;
   gap: .5rem;
   color: #115E59;
-  border-bottom: 4px solid #115E59;
 }
 
 .add-van:is(:hover, :focus){
   font-weight: 600;
   cursor: pointer;
   color: #000000;
-  border-color: #000000;
 }
 
-.add-van-container{
+.add-van-container, .edit-van-container{
     position: relative;
 }
 
@@ -1057,8 +1056,14 @@ button:disabled, .post-comment:disabled{
   height: fit-content;
   margin: 0 auto;
   background-color: #115E59;
-  color: #D1D5DB;
+  color: #FFFFFF;
   padding: 1rem;
+  border-radius: 3px;
+}
+
+.email-modal p{
+  margin: .5rem 0;
+  font-weight: 600;
 }
 
 .van-added{
@@ -1070,10 +1075,24 @@ button:disabled, .post-comment:disabled{
   right: 0;
 }
 
+.van-updated{
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
 .fa-xmark{
   display: block;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  background-color: #000000;
+  padding: 5px 10px;
+  border-radius: 50%;
   margin-left: auto;
+  margin-right: -1.5rem;
+  margin-top: -1.5rem;
 }
 
 

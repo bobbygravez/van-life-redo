@@ -118,7 +118,7 @@ function Dashboard() {
                 {noVans && <div>
                     <h1 className='no-vans'>No vans yet!</h1>
                     <Link to='addVan' className='add-van'>
-                        <p>Add a van</p>
+                        <p>Add Van</p>
                         <i className="fa-solid fa-circle-plus"></i>
                     </Link>
                 </div>}
