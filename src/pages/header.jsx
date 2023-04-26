@@ -6,7 +6,7 @@ import { signOut } from "firebase/auth"
 function Header(props) {
   const active = {
       textDecoration: "underline",
-      fontWeight: "700"
+      fontWeight: "800"
     }
 const loggedIn = localStorage.getItem("loginAccess")
   const navigate = useNavigate()
