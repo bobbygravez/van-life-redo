@@ -34,7 +34,6 @@ import Photos from './pages/host/Photos'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} errorElement={<Error />}>
-    <Route path='*' element={<NotFound />} />
     <Route index element={<Home />} />
     <Route path='about' element={<About />} />
     <Route path='login' element={<Login />} action={loginAction} errorElement={<Error />} />
@@ -61,6 +60,7 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path='addVan' element={<AddVan />} errorElement={<Error />} />
       </Route>
     </Route>
+    <Route path='*' element={<NotFound />} />
   </Route>
 ))
 

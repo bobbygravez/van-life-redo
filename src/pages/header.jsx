@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth"
 
 function Header(props) {
   const active = {
+      color: "#161616",
       textDecoration: "underline",
       fontWeight: "800"
     }
