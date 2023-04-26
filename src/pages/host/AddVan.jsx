@@ -8,6 +8,7 @@ function AddVan() {
     const [uploadProgress, setUploadProgress] = useState("0")
     const [loading, setLoading] = useState(false)
     const hostId = localStorage.getItem("userId")
+    const [fileName, setFileName] = useState("")
     const [showModal, setShowModal] = useState(false)
     const [displayMessage, setDisplayMessage] = useState({
         success: null,
@@ -34,7 +35,7 @@ function AddVan() {
 
     function addVan(e) {
         e.preventDefault()
-        if(auth.currentUser.emailVerified){
+        if (auth.currentUser.emailVerified) {
             setLoading(true)
             addDoc(vanCollection, {
                 name: vanData.name,
@@ -67,13 +68,14 @@ function AddVan() {
                         setDisplayMessage({ error: null })
                     }, 3000)
                 })
-        } else{
-                setShowModal(true)
+        } else {
+            setShowModal(true)
         }
     }
 
     function UploadImage(e) {
         const file = e.target.files[0]
+        setFileName(file.name)
         const vansRef = ref(storage, `vans/${file.name}`);
         const uploadTask = uploadBytesResumable(vansRef, file);
 
@@ -127,8 +129,13 @@ function AddVan() {
                     <option value="luxury">luxury</option>
                     <option value="rugged">rugged</option>
                 </select>
-                <label htmlFor="van-image" className='van-image-label'>Upload van image</label>
-                <input type="file" id='van-image' onChange={UploadImage} accept='.png, .jpeg, .gif, .jpg' required />
+                <p className='upload-image'>Upload van image</p> 
+                <label htmlFor="van-image" className='van-image-label'>
+                    <span>Select file:</span>
+                    <span>{fileName}</span>
+                    <input type="file" id='van-image' onChange={UploadImage} accept='.png, .jpeg, .gif, .jpg' required />
+                </label>
+
                 <div className='progress-container'>
                     <div className='progress-bar' style={{ width: `${uploadProgress}%`, padding: uploadProgress > 5 ? "3px" : "0" }}></div>
                     {uploadProgress > 0 && <p style={{ margin: "0" }}>{uploadProgress}%</p>}

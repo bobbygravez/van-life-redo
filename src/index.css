@@ -291,11 +291,33 @@ a.forgot-password{
 }
 
 .van-image-label{
-  display: inline-block;
+  /* display: inline-block;
   font-size: 1.2rem;
   margin-top: 1.5rem;
   margin-bottom: 0;
   margin-right: 1rem;
+  font-weight: 500; */
+  margin-right: 1rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.van-image-label span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.upload-image{
+  margin-bottom: .5rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -756,9 +778,16 @@ select:focus{
 input[type=file]{
   appearance: none;
   -webkit-appearance: none;
-  /* all: unset; */
+  /* all: unset;
   margin-top: .5rem;
-  width: 70%;
+  width: 70%; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
 textarea{
