@@ -12,6 +12,8 @@ export async function loader({ params }) {
 function EditVan() {
     const [uploadProgress, setUploadProgress] = useState("0")
     const [loading, setLoading] = useState(false)
+    const [fileName, setFileName] = useState("")
+    const [showFileName, setShowFileName] = useState(false)
     const hostId = localStorage.getItem("userId")
     const { id } = useParams()
     const storage = getStorage(app);
@@ -52,6 +54,7 @@ function EditVan() {
                 setDisplayMessage({ success: "Van updated!" })
                 setLoading(false)
                 setUploadProgress("0")
+                setShowFileName(false)
                 setTimeout(() => {
                     setDisplayMessage({ success: null })
                 }, 2000)
@@ -67,6 +70,8 @@ function EditVan() {
 
     function UploadImage(e) {
         const file = e.target.files[0]
+        setFileName(file.name)
+        setShowFileName(true)
         const vansRef = ref(storage, `vans/${file.name}`);
         const uploadTask = uploadBytesResumable(vansRef, file);
 
@@ -117,17 +122,20 @@ function EditVan() {
                 <label htmlFor="van-price" className='label'>Van price($/day):</label>
                 <input type="number" name="price" placeholder='Van price' id='van-price' value={vanData.price} onChange={handleChange} required />
                 <label htmlFor="van-type" className='label'>Van type:</label>
-                {/* <input type="text" name="type" placeholder='Van type' id='van-type' value={vanData.type} onChange={handleChange} required /> */}
                 <select name="type" id='van-type' value={vanData.type} onChange={handleChange} required>
                     <option value=""></option>
                     <option value="simple">simple</option>
                     <option value="luxury">luxury</option>
                     <option value="rugged">rugged</option>
                 </select>
-                <label htmlFor="van-image" className='van-image-label'>Update van image</label>
-                <input type="file" id='van-image' onChange={UploadImage} accept='.png, .jpeg, .gif, .jpg' />
+                <p className='upload-image'>Upload van image</p> 
+                <label htmlFor="van-image" className='van-image-label'>
+                    <span>Select file:</span>
+                    {showFileName && <span style={{color: "blue"}}>{fileName}</span>}
+                    <input type="file" id='van-image' onChange={UploadImage} accept='.png, .jpeg, .gif, .jpg'/>
+                </label>
                 <div className='progress-container'>
-                    <div className='progress-bar' style={{ width: `${uploadProgress}%`, padding: uploadProgress > 5 ? "10px" : "0" }}></div>
+                    <div className='progress-bar' style={{ width: `${uploadProgress}%`, padding: uploadProgress > 5 ? "3px" : "0" }}></div>
                     {uploadProgress > 0 && <p style={{ margin: "0" }}>{uploadProgress}%</p>}
                 </div>
                 <label htmlFor="van-description" className='label'>Van description:</label>

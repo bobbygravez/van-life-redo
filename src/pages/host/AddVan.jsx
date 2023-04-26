@@ -9,6 +9,7 @@ function AddVan() {
     const [loading, setLoading] = useState(false)
     const hostId = localStorage.getItem("userId")
     const [fileName, setFileName] = useState("")
+    const [showFileName, setShowFileName] = useState(false)
     const [showModal, setShowModal] = useState(false)
     const [displayMessage, setDisplayMessage] = useState({
         success: null,
@@ -58,6 +59,7 @@ function AddVan() {
                         hostId: hostId,
                     })
                     setUploadProgress("0")
+                    setShowFileName(false)
                     setTimeout(() => {
                         setDisplayMessage({ success: null })
                     }, 2000)
@@ -76,6 +78,7 @@ function AddVan() {
     function UploadImage(e) {
         const file = e.target.files[0]
         setFileName(file.name)
+        setShowFileName(true)
         const vansRef = ref(storage, `vans/${file.name}`);
         const uploadTask = uploadBytesResumable(vansRef, file);
 
@@ -132,7 +135,7 @@ function AddVan() {
                 <p className='upload-image'>Upload van image</p> 
                 <label htmlFor="van-image" className='van-image-label'>
                     <span>Select file:</span>
-                    <span>{fileName}</span>
+                    {showFileName && <span style={{color: "blue"}}>{fileName}</span>}
                     <input type="file" id='van-image' onChange={UploadImage} accept='.png, .jpeg, .gif, .jpg' required />
                 </label>
 
