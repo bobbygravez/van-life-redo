@@ -291,12 +291,6 @@ a.forgot-password{
 }
 
 .van-image-label{
-  /* display: inline-block;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  margin-right: 1rem;
-  font-weight: 500; */
   margin-right: 1rem;
   display: inline-block;
   position: relative;
@@ -716,6 +710,7 @@ button, .home a{
 }
 
 .post-comment{
+  color: #000000;
   margin: 1rem 0;
   background-color: #D1D5DB;
   border-radius: 5px;
