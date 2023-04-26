@@ -754,7 +754,8 @@ select:focus{
 }
 
 input[type=file]{
-  -webkit-all: unset;
+  appearance: none;
+  -webkit-appearance: none;
   all: unset;
   margin-top: .5rem;
   width: 70%;
