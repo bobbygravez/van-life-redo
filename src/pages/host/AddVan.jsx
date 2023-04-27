@@ -114,7 +114,7 @@ function AddVan() {
     }
 
     return (
-        <div className='padding add-van-container'>
+        <div className='add-van-container'>
             {displayMessage.error && <h2 className='error-message van-added'>{displayMessage.error}</h2>}
             {displayMessage.success && <h2 className='success-message van-added'>{displayMessage.success}</h2>}
             {showModal && <div className='email-modal'>

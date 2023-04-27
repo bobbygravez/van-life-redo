@@ -111,7 +111,7 @@ function EditVan() {
       }, [])
 
     return (
-        <div className='padding edit-van-container'>
+        <div className='edit-van-container'>
             <Link to=".." className='underline back-to-dashboard'><i className="fa-solid fa-arrow-left"></i> Back to dashboard</Link>
             {displayMessage.error && <h2 className='error-message van-updated'>{displayMessage.error}</h2>}
             {displayMessage.success && <h2 className='success-message van-updated'>{displayMessage.success}</h2>}

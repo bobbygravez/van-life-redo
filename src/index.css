@@ -361,6 +361,7 @@ hr {
   width: 100%;
   color: #FFFFFF;
   font-size: .7rem;
+  z-index: 1000;
 }
 
 .filters p:hover {
@@ -559,6 +560,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .header-nav {
@@ -1139,6 +1141,7 @@ button:disabled,
 
 .add-van-container,
 .edit-van-container {
+  padding: 2rem;
   position: relative;
 }
 
@@ -1359,5 +1362,10 @@ button:disabled,
 
 .hostVanDetail, .host-vans{
   margin-top: 0;
+}
+
+.add-van-container,
+.edit-van-container {
+  padding: 0 2rem;
 }
 }
