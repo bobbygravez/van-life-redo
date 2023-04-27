@@ -828,7 +828,8 @@ textarea {
 }
 
 button:disabled,
-.post-comment:disabled {
+.post-comment:disabled,
+.sign-in:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
