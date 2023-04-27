@@ -3,7 +3,7 @@ import AboutImg from "../images/vanlifeAbout.jpg"
 
 function About() {
     return (
-        <div>
+        <div className='about-container'>
             <div className='vanImgContainer'>
                 <img src={AboutImg} alt="night van image" className='vanCover-image' />
             </div>
