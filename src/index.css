@@ -347,10 +347,9 @@ a {
 
 hr {
   width: 100%;
-  padding: 2px;
   margin-top: 1rem;
   margin-bottom: 0;
-  padding: 1px;
+  border-color: #201F1D;
 }
 
 .verify-mail {
@@ -557,6 +556,9 @@ header {
   padding: 1rem;
   justify-content: space-between;
   background: #FFDDB3;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header-nav {
@@ -588,6 +590,7 @@ footer {
 }
 
 main {
+  margin-top: 100px;
   padding-bottom: 60px;
 }
 
@@ -1231,8 +1234,16 @@ button:disabled,
     margin: 0 auto;
   }
 
+  header{
+    position: fixed;
+    top: 0;
+    width: 80vw;
+  }
+
   .home {
     text-align: center;
+    margin-top: 2rem;
+    border-radius: 5px;
   }
 
   .home a,
@@ -1257,12 +1268,18 @@ button:disabled,
 
   .host-nav {
     flex-direction: column;
-    width: 30%;
     background-color: #FFEAD0;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     padding-top: 2rem;
     border-radius: 5px;
-    height: 100vh;
+    height: 50vh;
+    position: fixed;
+    width: 20%;
+
+  }
+
+  footer{
+    z-index: 10;
   }
 
   .dashboard,
@@ -1273,6 +1290,7 @@ button:disabled,
   .income,
   .edit-van-container {
     width: 70%;
+    margin-left: 30%;
   }
 
   .host-nav a {
@@ -1339,7 +1357,7 @@ button:disabled,
   margin: 0 auto;
 }
 
-.hostVanDetail{
+.hostVanDetail, .host-vans{
   margin-top: 0;
 }
 }
