@@ -617,6 +617,7 @@ img {
   min-height: 100vh;
   position: relative;
   background-color: #FFF7ED;
+  box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -976,7 +977,7 @@ button:disabled,
   align-items: center;
 }
 
-.vans-list {
+.vans-list, .host-list {
   margin: 1rem 0;
   padding: 1rem;
   background: #FFFFFF;
@@ -1031,21 +1032,22 @@ button:disabled,
 }
 
 .host-vans {
+  padding: 1rem;
+  margin: 0;
   margin-top: 5rem;
 }
 
 .reviews {
   margin-top: 60px;
-  background: #FFFFFF;
 }
 
 .review-img-container {
-  padding: 2rem 2rem 0;
+  padding: 2rem;
+  background: #FFFFFF;
 }
 
 .review-container {
   margin-top: 2rem;
-  background-color: #FFF7ED;
   width: 100%;
   padding: 1rem 2rem 0;
 }
@@ -1102,7 +1104,7 @@ button:disabled,
 }
 
 .hostVanDetail {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .hostVanDetail section {
@@ -1299,7 +1301,7 @@ button:disabled,
     padding: 2rem;
   }
 
-  .vans-list-container {
+  .vans-list-container, .host-vans {
     padding: 0 2rem;
   }
 
@@ -1498,7 +1500,28 @@ button:disabled,
   margin-top: 0;
 }
 
-.vans-list{
-  flex-direction: row;
+.host-container{
+  width: 90%;
 }
+
+}
+
+@media (min-width: 1600px){
+  .vans-list-container, .host-vans-list{
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    padding-top: 0;
+  }
+  
+  .vans-list, .host-list-container{
+    margin-top: 0;
+    flex-basis: 49%;
+  }
+
+  .host-container, .review-img-container, .review-container{
+    width: 70%;
+  }
 }

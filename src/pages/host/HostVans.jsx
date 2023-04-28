@@ -17,13 +17,13 @@ function HostVans() {
 
   
   return (
-    <div className='host-vans vans-list-container'>
+    <div className='host-vans'>
       <Suspense fallback={<FaSpinner className='loader' />}>
         <Await resolve={loaderData.vans}>
           {vans => {
             const displayVans = vans.map(van => {
-              return <Link to={van.id} key={van.id}>
-                <div className="vans-list">
+              return <Link to={van.id} key={van.id} className='host-list-container'>
+                <div className="host-list">
                   <img src={van.imageUrl} alt="van-image" className='vans-list-image' />
                   <div className='van-desc'>
                     <h2>{van.name}</h2>
@@ -36,7 +36,9 @@ function HostVans() {
             return (
               <div>
                 {displayVans.length > 0 && <h1>Your listed vans</h1>}
-                {displayVans}
+                <div className='host-vans-list'>
+                    {displayVans}
+                </div>
                 {displayVans.length < 1 && <h1 className='no-vans'>No vans yet!</h1>}
               </div>
             )
