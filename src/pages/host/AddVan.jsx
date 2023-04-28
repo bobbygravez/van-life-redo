@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { addDoc } from "firebase/firestore";
 import { vanCollection, app, auth } from '../../Api';
@@ -112,6 +112,10 @@ function AddVan() {
             }
         );
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [])
 
     return (
         <div className='add-van-container'>
