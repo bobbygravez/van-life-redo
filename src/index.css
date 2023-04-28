@@ -555,6 +555,10 @@ p.van-review-text {
   right: 0;
 }
 
+.have-an-account{
+  margin-bottom: 2.5rem;
+}
+
 
 /* images */
 
@@ -927,15 +931,30 @@ button:disabled,
   display: flex;
   gap: 3%;
   padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  background-color: #4D4D4D;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1000;
 }
 
 .host-nav a {
   font-size: .9rem;
+  color: #FFFFFF;
 }
 
+  
+
 .dashboard-welcome {
+  padding-top: 2rem;
   background: #FFEAD0;
   margin-top: 3rem;
+}
+
+.income{
+  padding-top: 1rem;
 }
 
 .income-desc {
@@ -974,7 +993,7 @@ button:disabled,
 }
 
 .vans-list-container {
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -1012,11 +1031,11 @@ button:disabled,
 }
 
 .host-vans {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .reviews {
-  margin-top: 3rem;
+  margin-top: 60px;
   background: #FFFFFF;
 }
 
@@ -1214,6 +1233,7 @@ button:disabled,
 .add-van-container,
 .edit-van-container {
   padding: 2rem;
+  padding-top: 3rem;
   position: relative;
 }
 
@@ -1272,7 +1292,7 @@ button:disabled,
   }
 
   .host-nav {
-    padding: 0 2rem;
+    padding: 20px 2rem;
   }
 
   .padding {
@@ -1369,6 +1389,7 @@ button:disabled,
     /* margin-right: 2rem; */
     padding-top: 2rem;
     border-radius: 5px;
+    top: unset;
     height: 50vh;
     position: fixed;
     width: 20%;
@@ -1392,6 +1413,7 @@ button:disabled,
 
   .host-nav a {
     display: block;
+    color: #161616;
     width: 100%;
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -1466,5 +1488,17 @@ button:disabled,
 
 .delete-modal{
   left: 20vw;
+}
+
+.income{
+  padding-top: unset;
+}
+
+.reviews {
+  margin-top: 0;
+}
+
+.vans-list{
+  flex-direction: row;
 }
 }

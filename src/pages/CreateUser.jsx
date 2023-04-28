@@ -73,7 +73,7 @@ function CreateUser() {
                 <input type="password" name='password' placeholder='Password' required autoComplete='off' />
                 <button disabled={navigation.state === "submitting"} className='sign-in'>{navigation.state === "submitting" ? "creating account.." : "create account"}</button>
             </Form>
-            <p>Already have an account? <Link to='/login'><span>Sign in</span></Link></p>
+            <p className='have-an-account'>Already have an account? <Link to='/login'><span>Sign in</span></Link></p>
             <hr />
             <p className='or'>Or</p>
             <div className='google-sign-in' onClick={signInWithGoogle}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import income from "../../images/income.jpg"
 
 function Income() {
@@ -7,6 +7,12 @@ function Income() {
         { amount: 560, date: "Dec 12, 22", id: "2" },
         { amount: 980, date: "Dec 3, 22", id: "3" },
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [])
+
+
   return (
     <section className='income'>
         <div className='padding'>

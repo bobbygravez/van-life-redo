@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
-import { useLoaderData, defer, Await, useSearchParams, Link } from 'react-router-dom'
+import React, { Suspense, useEffect } from 'react'
+import { useLoaderData, defer, Await, Link } from 'react-router-dom'
 import { getHostVans } from '../../Api'
 import { FaSpinner } from 'react-icons/fa';
 
@@ -10,6 +10,12 @@ export async function loader() {
 
 function HostVans() {
   const loaderData = useLoaderData()
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+  
   return (
     <div className='host-vans vans-list-container'>
       <Suspense fallback={<FaSpinner className='loader' />}>

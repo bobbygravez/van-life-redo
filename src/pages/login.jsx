@@ -79,7 +79,7 @@ function Login() {
                 <Link to='/forgotPassword' className='forgot-password'>Forgot Password?</Link>
                 <button disabled={navigation.state === "submitting"} className='sign-in'>{navigation.state === "submitting" ? "Signing in...." : "Sign in"}</button>
             </Form>
-            <p>Don't have an account? <Link to="/createUser"><span>Create one now</span></Link></p>
+            <p className='have-an-account'>Don't have an account? <Link to="/createUser"><span>Create one now</span></Link></p>
             <hr />
             <p className='or'>Or</p>
             <div className='google-sign-in' onClick={signInWithGoogle}>
