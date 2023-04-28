@@ -753,6 +753,10 @@ button,
   cursor: pointer;
 }
 
+.van-detail-page{
+  /* padding-top: 2rem; */
+}
+
 .vans-container {
   margin-top: 3rem;
   display: grid;
