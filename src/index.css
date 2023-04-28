@@ -541,7 +541,7 @@ p.van-review-text {
   font-size: 1.7rem;
   font-weight: 500;
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 0;
   right: 0;
 }
@@ -616,7 +616,7 @@ img {
 }
 
 header {
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -657,7 +657,7 @@ footer {
 }
 
 main {
-  margin-top: 100px;
+  padding-top: 70px;
   padding-bottom: 60px;
 }
 
@@ -1327,9 +1327,14 @@ button:disabled,
   }
 
   header{
+    height: 100px;
     position: fixed;
     top: 0;
     width: 80vw;
+  }
+
+  main{
+    padding-top: 100px;
   }
 
   .home {

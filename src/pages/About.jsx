@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import AboutImg from "../images/vanlifeAbout.jpg"
 
 function About() {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [])
+    
     return (
         <div className='about-container'>
             <div className='vanImgContainer'>

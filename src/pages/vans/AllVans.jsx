@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { useLoaderData, defer, Await, useSearchParams, Link } from 'react-router-dom'
 import { getVans } from '../../Api'
 import { FaSpinner } from 'react-icons/fa';
@@ -23,6 +23,10 @@ function Vans() {
       return prevParams
     })
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
 
   return (

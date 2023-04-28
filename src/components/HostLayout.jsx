@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 
 function HostLayout() {
@@ -6,6 +6,11 @@ function HostLayout() {
       textDecoration: "underline",
       fontWeight: "700"
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div className='host'>
       <nav className='host-nav'>
