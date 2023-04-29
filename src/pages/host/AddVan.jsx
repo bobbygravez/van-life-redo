@@ -119,14 +119,14 @@ function AddVan() {
 
     return (
         <div className='add-van-container'>
-            {displayMessage.error && <h2 className='error-message van-added'>{displayMessage.error}</h2>}
-            {displayMessage.success && <h2 className='success-message van-added'>{displayMessage.success}</h2>}
-            {showModal && <div className='email-modal'>
-                <i className="fa-solid fa-xmark" onClick={() => setShowModal(false)}></i>
-                <p>You need to verify your email before you can add a van.</p>
-                <p>click the link we sent to your mail to verify your address.</p>
-            </div>}
-            <form onSubmit={addVan}>
+            <form onSubmit={addVan} className='form-container'>
+                {displayMessage.error && <h2 className='error-message van-added'>{displayMessage.error}</h2>}
+                {displayMessage.success && <h2 className='success-message van-added'>{displayMessage.success}</h2>}
+                {showModal && <div className='email-modal'>
+                    <i className="fa-solid fa-xmark" onClick={() => setShowModal(false)}></i>
+                    <p>You need to verify your email before you can add a van.</p>
+                    <p>click the link we sent to your mail to verify your address.</p>
+                </div>}
                 <input type="text" name="name" placeholder='Van name' value={vanData.name} onChange={handleChange} required />
                 <input type="number" name="price" placeholder='Van price($/day)' value={vanData.price} onChange={handleChange} required />
                 <label htmlFor="van-type" className='label'>Van type:</label>

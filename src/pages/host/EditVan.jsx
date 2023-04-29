@@ -113,10 +113,10 @@ function EditVan() {
     return (
         <div className='edit-van-container'>
             <Link to=".." className='underline back-to-dashboard'><i className="fa-solid fa-arrow-left"></i> Back to dashboard</Link>
-            {displayMessage.error && <h2 className='error-message van-updated'>{displayMessage.error}</h2>}
-            {displayMessage.success && <h2 className='success-message van-updated'>{displayMessage.success}</h2>}
             <img src={van.imageUrl} alt="van image" className='host-van-image' />
-            <form onSubmit={updateVan}>
+            <form onSubmit={updateVan} className='form-container'>
+                {displayMessage.error && <h2 className='error-message van-updated'>{displayMessage.error}</h2>}
+                {displayMessage.success && <h2 className='success-message van-updated'>{displayMessage.success}</h2>}
                 <label htmlFor="van-name" className='label'>Van name:</label>
                 <input type="text" name="name" placeholder='Van name' id='van-name' value={vanData.name} onChange={handleChange} required />
                 <label htmlFor="van-price" className='label'>Van price($/day):</label>

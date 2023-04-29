@@ -552,7 +552,7 @@ p.van-review-text {
   font-size: 1.8rem;
   font-weight: 600;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -1250,6 +1250,9 @@ button:disabled,
 .edit-van-container {
   padding: 2rem;
   padding-top: 3rem;
+}
+
+.form-container{
   position: relative;
 }
 
