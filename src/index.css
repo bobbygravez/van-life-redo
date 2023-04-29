@@ -545,6 +545,7 @@ p.van-review-text {
   top: 40%;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .van-updated {
@@ -554,6 +555,7 @@ p.van-review-text {
   top: 50%;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .have-an-account{
