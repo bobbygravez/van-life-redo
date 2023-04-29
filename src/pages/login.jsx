@@ -49,7 +49,7 @@ function Login() {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
-                console.log(user)
+                // console.log(user)
                 localStorage.setItem("loginAccess", user.accessToken)
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...

@@ -86,7 +86,7 @@ function AddVan() {
             (snapshot) => {
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setUploadProgress(progress.toFixed(0))
-                console.log('Upload is ' + progress + '% done');
+                // console.log('Upload is ' + progress + '% done');
                 switch (snapshot.state) {
                     case 'paused':
                         // console.log('Upload is paused');

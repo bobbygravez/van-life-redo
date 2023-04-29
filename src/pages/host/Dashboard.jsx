@@ -115,7 +115,7 @@ function Dashboard() {
             <div className='vans-list-container'>
                 {displayVans}
                 {errorMessage.message && <p className='error-message'>{errorMessage.message}</p>}
-                {noVans && <div>
+                {noVans && <div className='no-vans-conatainer'>
                     <h1 className='no-vans'>No vans yet!</h1>
                     <Link to='addVan' className='add-van'>
                         <p>Add Van</p>

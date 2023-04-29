@@ -1521,6 +1521,11 @@ button:disabled,
   width: 90%;
 }
 
+.no-vans-conatainer{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 }
 
 @media (min-width: 1600px){
