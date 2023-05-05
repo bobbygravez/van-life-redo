@@ -9,7 +9,7 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "new-vanlife.firebaseapp.com",
   projectId: "new-vanlife",
   storageBucket: "new-vanlife.appspot.com",
