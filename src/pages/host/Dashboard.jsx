@@ -56,7 +56,9 @@ function Dashboard() {
             }
             setLoading(false)
         });
-    }, [vanCollection])
+
+        return unsubscribe
+    }, [])
 
 
     const displayVans = vans.map(van => {

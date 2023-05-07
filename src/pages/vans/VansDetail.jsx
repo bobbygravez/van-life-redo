@@ -38,7 +38,9 @@ function VansDetail() {
       })
       setLoading(false)
     });
-  }, [vanCollection])
+
+    return unSub
+  }, [])
 
 
   function addReview() {

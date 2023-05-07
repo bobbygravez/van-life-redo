@@ -20,35 +20,35 @@ function Reviews() {
             </div>
             <Suspense fallback={<FaSpinner className='loader' />}>
                 <Await resolve={loaderData.hostVans}>
-                {(van) => {
+                    {(van) => {
                     const data = van.map(item => {
                         return <div key={item.id}>
                             {item.reviews.map(review => {
                                 return <div key={review.commentId}>
-                                        <div className="review">
-                                            {/* {[...Array(review.rating)].map((_, i) => (
-                                                <BsStarFill className="review-star" key={i} />
-                                            ))} */}
-                                            <div className="info">
-                                                <p className="name">{review.name}</p>
-                                                <p className="date">{review.date} </p>
-                                            </div>
-                                            <p className='review-text'>{review.comment}</p>
-                                            <small><strong>{review.vanName}</strong></small>
+                                    <div className="review">
+                                        {/* {[...Array(review.rating)].map((_, i) => (
+                                            <BsStarFill className="review-star" key={i} />
+                                        ))} */}
+                                        <div className="info">
+                                            <p className="name">{review.name}</p>
+                                            <p className="date">{review.date} </p>
                                         </div>
-                                        <hr />
+                                        <p className='review-text'>{review.comment}</p>
+                                        <small><strong>{review.vanName}</strong></small>
                                     </div>
-                                })
+                                    <hr />
+                                </div>
+                            })
                             }
                         </div>
-                    })
+                        })
 
-            return (
-                    <div className="review-container">
-                        {data}
-                    </div>
-                    )
-                }}
+                        return (
+                            <div className="review-container">
+                                {data}
+                            </div>
+                        )
+                    }}
                 </Await>
             </Suspense>
         </div>

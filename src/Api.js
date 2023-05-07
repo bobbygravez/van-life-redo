@@ -7,7 +7,6 @@ import {
     signInWithEmailAndPassword
 } from "firebase/auth"
 
-
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "new-vanlife.firebaseapp.com",
