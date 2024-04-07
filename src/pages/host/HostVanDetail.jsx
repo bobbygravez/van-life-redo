@@ -2,16 +2,13 @@ import React, { Suspense } from 'react'
 import { getHostVan } from '../../Api'
 import { defer, Await, useLoaderData, Outlet, Link, NavLink } from "react-router-dom"
 import { FaSpinner } from 'react-icons/fa';
+import HostVanNav from './hostVanNav';
 
 export async function loader({ params }) {
     return defer({ hostVan: getHostVan(params.id) })
 }
 
 function HostVanDetail() {
-    const active = {
-        textDecoration: "underline",
-        fontWeight: "700"
-    }
     const loaderData = useLoaderData()
     return (
         <div className='padding hostVanDetail'>
@@ -29,12 +26,7 @@ function HostVanDetail() {
                                         <h3 className='hostvan-price'>${van.price}<span>/day</span></h3>
                                     </div>
                                 </div>
-                                <nav className='hostVan-nav'>
-                                    <NavLink to="." end style={({isActive}) => isActive? active : null}>Details</NavLink>
-                                    <NavLink to="pricing" style={({isActive}) => isActive? active : null}>Pricing</NavLink>
-                                    <NavLink to="photos" style={({isActive}) => isActive? active : null}>Photos</NavLink>
-                                </nav>
-
+                                <HostVanNav />
                                 <Outlet context={{van}} />
                             </section>
                         }}
